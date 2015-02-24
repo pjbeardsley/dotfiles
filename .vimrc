@@ -9,6 +9,9 @@ Plug 'epmatsw/ag.vim'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-commentary'
+Plug 'wojtekmach/vim-rename'
+Plug 'editorconfig/editorconfig-vim'
 
 " Visual enhancements
 Plug 'bling/vim-airline'
@@ -18,6 +21,8 @@ Plug 'chriskempson/base16-vim'
 " Syntax highlighting
 Plug 'evidens/vim-twig'
 Plug 'plasticboy/vim-markdown'
+Plug 'mxw/vim-jsx'
+Plug 'elzr/vim-json'
 
 call plug#end()
 
@@ -27,6 +32,7 @@ set guioptions-=L
 set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 set clipboard=unnamed
 set number
+set cursorline
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
