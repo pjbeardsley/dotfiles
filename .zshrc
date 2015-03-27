@@ -1,5 +1,7 @@
 source ~/.antigen/antigen.zsh
 
+export PATH=/Users/pbeardsley/bin:$PATH
+
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
@@ -19,3 +21,5 @@ antigen apply
 
 #aliases
 alias ll='ls -al'
+alias vim='/usr/local/bin/mvim'
+alias vi='/usr/local/bin/mvim'

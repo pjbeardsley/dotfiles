@@ -12,6 +12,9 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'wojtekmach/vim-rename'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'vim-scripts/loremipsum'
+Plug 'Valloric/YouCompleteMe'
+Plug 'shime/vim-livedown'
 
 " Visual enhancements
 Plug 'bling/vim-airline'
@@ -41,9 +44,12 @@ let g:netrw_liststyle=3
 let g:airline_powerline_fonts=1
 let g:vim_markdown_folding_disabled=1
 
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
+
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-colorscheme base16-default
+colorscheme base16-bespin
