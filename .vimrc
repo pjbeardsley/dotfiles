@@ -34,11 +34,14 @@ set guioptions-=r
 set guioptions-=L
 set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 set clipboard=unnamed
+set hidden
 set number
 set cursorline
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set nobackup
+set noswapfile
 
 let g:netrw_liststyle=3
 let g:airline_powerline_fonts=1
@@ -47,9 +50,14 @@ let g:vim_markdown_folding_disabled=1
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 
+let g:airline#extensions#tabline#enabled = 1
+
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
 
 colorscheme base16-bespin
