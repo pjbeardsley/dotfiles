@@ -11,7 +11,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'wojtekmach/vim-rename'
-Plug 'editorconfig/editorconfig-vim'
+"Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-scripts/loremipsum'
 Plug 'Valloric/YouCompleteMe'
 Plug 'shime/vim-livedown'
@@ -20,6 +20,8 @@ Plug 'shime/vim-livedown'
 Plug 'bling/vim-airline'
 Plug 'daylerees/colour-schemes'
 Plug 'chriskempson/base16-vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/vim-tomorrow-theme'
 
 " Syntax highlighting
 Plug 'evidens/vim-twig'
@@ -43,13 +45,19 @@ set softtabstop=4
 set nobackup
 set noswapfile
 
+" For Drupal
+autocmd FileType php setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 expandtab
+
 let g:netrw_liststyle=3
-let g:airline_powerline_fonts=1
 let g:vim_markdown_folding_disabled=1
 
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 0
 
+let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 
 map <C-h> <C-w>h
@@ -57,7 +65,8 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+let mapleader = ","
 nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
 
-colorscheme base16-bespin
+colorscheme base16-tomorrow
