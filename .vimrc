@@ -22,6 +22,7 @@ Plug 'daylerees/colour-schemes'
 Plug 'chriskempson/base16-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'morhetz/gruvbox'
 
 " Syntax highlighting
 Plug 'evidens/vim-twig'
@@ -34,7 +35,7 @@ call plug#end()
 set background=dark
 set guioptions-=r
 set guioptions-=L
-set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+set guifont=Sauce\ Code\ Powerline\ Light:h13
 set clipboard=unnamed
 set hidden
 set number
@@ -69,4 +70,4 @@ let mapleader = ","
 nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
 
-colorscheme base16-tomorrow
+colorscheme gruvbox
