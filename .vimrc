@@ -11,10 +11,9 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'wojtekmach/vim-rename'
-"Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-scripts/loremipsum'
-Plug 'Valloric/YouCompleteMe'
 Plug 'shime/vim-livedown'
+Plug 'mhinz/vim-sayonara'
 
 " Visual enhancements
 Plug 'bling/vim-airline'
@@ -23,6 +22,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
 
 " Syntax highlighting
 Plug 'evidens/vim-twig'
@@ -31,6 +31,9 @@ Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
 
 call plug#end()
+
+filetype plugin indent on
+syntax on
 
 set background=dark
 set guioptions-=r
@@ -50,6 +53,10 @@ set noswapfile
 autocmd FileType php setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 expandtab
 
+" ISML/DWSCRIPT
+au BufRead *.isml set ft=isml
+au BufRead *.ds set ft=javascript
+
 let g:netrw_liststyle=3
 let g:vim_markdown_folding_disabled=1
 
@@ -66,8 +73,11 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-let mapleader = ","
+let mapleader = " "
 nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
+nmap <leader>d :Sayonara<CR>
+nmap <leader>D :Sayonara!<CR>
 
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme PaperColor

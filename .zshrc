@@ -23,3 +23,4 @@ antigen apply
 alias ll='ls -al'
 alias vim='/usr/local/bin/mvim'
 alias vi='/usr/local/bin/mvim'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
