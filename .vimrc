@@ -14,6 +14,8 @@ Plug 'wojtekmach/vim-rename'
 Plug 'vim-scripts/loremipsum'
 Plug 'shime/vim-livedown'
 Plug 'mhinz/vim-sayonara'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'jeetsukumaran/vim-filebeagle'
 
 " Visual enhancements
 Plug 'bling/vim-airline'
@@ -23,6 +25,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'baskerville/bubblegum'
 
 " Syntax highlighting
 Plug 'evidens/vim-twig'
@@ -48,6 +51,9 @@ set shiftwidth=4
 set softtabstop=4
 set nobackup
 set noswapfile
+set listchars=tab:▸\ ,eol:¬
+set list
+set noshowmode
 
 " For Drupal
 autocmd FileType php setlocal shiftwidth=2 tabstop=2 expandtab
@@ -79,5 +85,4 @@ nmap <leader>h :bprevious<CR>
 nmap <leader>d :Sayonara<CR>
 nmap <leader>D :Sayonara!<CR>
 
-" colorscheme gruvbox
-colorscheme PaperColor
+colorscheme solarized
