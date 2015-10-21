@@ -10,12 +10,14 @@ Plug 'godlygeek/tabular'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'wojtekmach/vim-rename'
 Plug 'vim-scripts/loremipsum'
 Plug 'shime/vim-livedown'
 Plug 'mhinz/vim-sayonara'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jeetsukumaran/vim-filebeagle'
+Plug 'freeo/vim-kalisi'
 
 " Visual enhancements
 Plug 'bling/vim-airline'
@@ -26,6 +28,13 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'baskerville/bubblegum'
+Plug 'tomasr/molokai'
+Plug 'sheerun/vim-wombat-scheme'
+Plug 'notpratheek/vim-luna'
+Plug 'notpratheek/vim-sol'
+Plug 'jscappini/material.vim'
+Plug 'ronny/birds-of-paradise.vim'
+Plug 'w0ng/vim-hybrid'
 
 " Syntax highlighting
 Plug 'evidens/vim-twig'
@@ -41,7 +50,7 @@ syntax on
 set background=dark
 set guioptions-=r
 set guioptions-=L
-set guifont=Sauce\ Code\ Powerline\ Light:h13
+set guifont=InputMono\ ExLight:h13
 set clipboard=unnamed
 set hidden
 set number
@@ -73,6 +82,7 @@ let g:ctrlp_use_caching = 0
 
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='kalisi'
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -85,4 +95,4 @@ nmap <leader>h :bprevious<CR>
 nmap <leader>d :Sayonara<CR>
 nmap <leader>D :Sayonara!<CR>
 
-colorscheme solarized
+colorscheme kalisi
