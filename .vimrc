@@ -17,9 +17,11 @@ Plug 'shime/vim-livedown'
 Plug 'mhinz/vim-sayonara'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jeetsukumaran/vim-filebeagle'
+Plug 'lilydjwg/colorizer'
 
 " Visual enhancements
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'daylerees/colour-schemes'
 Plug 'chriskempson/base16-vim'
 Plug 'altercation/vim-colors-solarized'
@@ -38,6 +40,9 @@ Plug 'freeo/vim-kalisi'
 Plug 'zeis/vim-kolor'
 Plug 'joshdick/onedark.vim'
 Plug 'joshdick/airline-onedark.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'sickill/vim-monokai'
 
 " Syntax highlighting
 Plug 'evidens/vim-twig'
@@ -54,7 +59,7 @@ syntax on
 set background=dark
 set guioptions-=r
 set guioptions-=L
-set guifont=InputMono\ ExLight:h13
+set guifont=InputMono:h13
 set linespace=2
 set clipboard=unnamed
 set hidden
@@ -70,6 +75,7 @@ set list
 set noshowmode
 set lazyredraw
 set ttyfast
+set nofoldenable
 
 " Check for file changes
 set autoread
@@ -106,9 +112,12 @@ let g:filebeagle_show_hidden = 1
 
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='base16'
+" let g:airline_theme='molokai'
+let g:airline#extensions#whitespace#checks = []
 
 :let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+let g:jellybeans_use_lowcolor_black = 0
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -121,4 +130,4 @@ nmap <leader>h :bprevious<CR>
 nmap <leader>d :Sayonara<CR>
 nmap <leader>D :Sayonara!<CR>
 
-colorscheme base16-ocean
+colorscheme base16-monokai
