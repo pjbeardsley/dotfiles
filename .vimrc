@@ -4,7 +4,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 
 " Functional enhancements
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'epmatsw/ag.vim'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-surround'
@@ -43,6 +45,11 @@ Plug 'joshdick/airline-onedark.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'sickill/vim-monokai'
+Plug 'cocopon/iceberg.vim'
+" Plug 'jacoborus/tender'
+Plug 'trevordmiller/nova-vim'
+Plug 'gertjanreynaert/cobalt2-vim-theme'
+
 
 " Syntax highlighting
 Plug 'evidens/vim-twig'
@@ -76,6 +83,7 @@ set noshowmode
 set lazyredraw
 set ttyfast
 set nofoldenable
+set termguicolors
 
 " Check for file changes
 set autoread
@@ -96,13 +104,14 @@ augroup END
 " For Drupal
 autocmd FileType php setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 expandtab
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
 
 let g:vim_markdown_folding_disabled=1
 
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 0
+let g:ctrlp_user_command = 'ag -U %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 1
 let g:ctrlp_by_filename = 1
 
 " Don't open first ag.vim result in a buffer
@@ -112,12 +121,14 @@ let g:filebeagle_show_hidden = 1
 
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline_theme='molokai'
+" let g:tender_airline = 1
+" let g:airline_theme = 'tender'
+let g:airline_theme='wombat'
 let g:airline#extensions#whitespace#checks = []
 
-:let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" :let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-let g:jellybeans_use_lowcolor_black = 0
+" let g:jellybeans_use_lowcolor_black = 0
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -129,5 +140,8 @@ nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
 nmap <leader>d :Sayonara<CR>
 nmap <leader>D :Sayonara!<CR>
+nmap <C-P> :Files<CR>
 
-colorscheme base16-monokai
+" colorscheme tender
+colorscheme wombat
+set colorcolumn=
