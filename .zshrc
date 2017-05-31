@@ -1,6 +1,9 @@
 source ~/.antigen/antigen.zsh
 
-export PATH=/Users/pbeardsley/bin:/Users/pbeardsley/.yarn/bin:/usr/local/bin:/Users/pbeardsley/.cargo/bin:/usr/local/opt/node@6/bin:$PATH
+export PATH=/Users/pbeardsley/bin:/Users/pbeardsley/.yarn/bin:/usr/local/bin:/Users/pbeardsley/.cargo/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh

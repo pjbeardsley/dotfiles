@@ -4,7 +4,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 
 " Functional enhancements
-" Plug 'ctrlpvim/ctrlp.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'epmatsw/ag.vim'
@@ -20,6 +19,7 @@ Plug 'mhinz/vim-sayonara'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'lilydjwg/colorizer'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Visual enhancements
 Plug 'bling/vim-airline'
@@ -46,10 +46,8 @@ Plug 'junegunn/seoul256.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'sickill/vim-monokai'
 Plug 'cocopon/iceberg.vim'
-" Plug 'jacoborus/tender'
 Plug 'trevordmiller/nova-vim'
 Plug 'gertjanreynaert/cobalt2-vim-theme'
-
 
 " Syntax highlighting
 Plug 'evidens/vim-twig'
@@ -66,7 +64,7 @@ syntax on
 set background=dark
 set guioptions-=r
 set guioptions-=L
-set guifont=InputMono:h13
+" set guifont=InputMono:h13
 set linespace=2
 set clipboard=unnamed
 set hidden
@@ -84,6 +82,7 @@ set lazyredraw
 set ttyfast
 set nofoldenable
 set termguicolors
+set mouse=a
 
 " Check for file changes
 set autoread
@@ -108,12 +107,6 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
 
 let g:vim_markdown_folding_disabled=1
 
-let g:ctrlp_max_files=0
-let g:ctrlp_max_depth=40
-let g:ctrlp_user_command = 'ag -U %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 1
-let g:ctrlp_by_filename = 1
-
 " Don't open first ag.vim result in a buffer
 ca Ag Ag!
 
@@ -121,19 +114,13 @@ let g:filebeagle_show_hidden = 1
 
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
-" let g:tender_airline = 1
-" let g:airline_theme = 'tender'
-let g:airline_theme='wombat'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#whitespace#checks = []
-
-" :let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-
-" let g:jellybeans_use_lowcolor_black = 0
-
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+let g:airline_powerline_fonts = 0
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 let mapleader = " "
 nmap <leader>l :bnext<CR>
@@ -142,6 +129,5 @@ nmap <leader>d :Sayonara<CR>
 nmap <leader>D :Sayonara!<CR>
 nmap <C-P> :Files<CR>
 
-" colorscheme tender
-colorscheme wombat
+colorscheme gruvbox
 set colorcolumn=
