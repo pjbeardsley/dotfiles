@@ -1,9 +1,12 @@
+echo -e "\033]6;1;bg;red;brightness;58\a"
+echo -e "\033]6;1;bg;green;brightness;62\a"
+echo -e "\033]6;1;bg;blue;brightness;74\a" 
 source ~/.antigen/antigen.zsh
 
-export PATH=/Users/pbeardsley/bin:/Users/pbeardsley/.yarn/bin:/usr/local/bin:/Users/pbeardsley/.cargo/bin:$PATH
+export PATH=/Users/pbeardsley/bin:/usr/local/bin:/Users/pbeardsley/.cargo/bin:/usr/local/opt/python@2/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -14,10 +17,13 @@ antigen bundle vagrant
 
 # Contrib bundles
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen-bundle Tarrasch/zsh-bd
+antigen bundle Tarrasch/zsh-bd
+antigen bundle lukechilds/zsh-nvm
 
 # Load the theme.
-antigen theme eastwood
+# antigen theme eastwood
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
 
 # Tell antigen that you're done.
 antigen apply
@@ -32,3 +38,6 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 
 # fetch
 /usr/local/bin/neofetch
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
