@@ -1,6 +1,6 @@
-echo -e "\033]6;1;bg;red;brightness;58\a"
-echo -e "\033]6;1;bg;green;brightness;62\a"
-echo -e "\033]6;1;bg;blue;brightness;74\a" 
+echo -e "\033]6;1;bg;red;brightness;41\a"
+echo -e "\033]6;1;bg;green;brightness;45\a"
+echo -e "\033]6;1;bg;blue;brightness;62\a" 
 source ~/.antigen/antigen.zsh
 
 export PATH=/Users/pbeardsley/bin:/usr/local/bin:/Users/pbeardsley/.cargo/bin:/usr/local/opt/python@2/bin:$PATH
@@ -21,9 +21,9 @@ antigen bundle Tarrasch/zsh-bd
 antigen bundle lukechilds/zsh-nvm
 
 # Load the theme.
-# antigen theme eastwood
+antigen theme avit
 antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+# antigen bundle sindresorhus/pure
 
 # Tell antigen that you're done.
 antigen apply
@@ -36,8 +36,12 @@ alias nvim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
 # fzf settings
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
+# ripgrep settings
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
 # fetch
-/usr/local/bin/neofetch
+# /usr/local/bin/neofetch
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+export HOMEBREW_GITHUB_API_TOKEN=319b9b16add946a6974144e92f96682b7055320a
